@@ -1,0 +1,119 @@
+#!/usr/bin/env python3
+import pygame, sys
+from pygame.locals import *
+from Components.Screen import *
+from Scenes.Menu import *
+from Scenes.Space import *
+from Scenes.Water import *
+from Scenes.Roche import *
+from Scenes.Road import *
+
+pygame.init()
+
+# Initialisation des elements de la fenetre (titre, icon...)
+pygame.key.set_repeat(1, 1)
+pygame.display.set_caption("Shooter")
+pygame.display.set_icon(pygame.image.load('Ressources/Sprites/logo.png'))
+
+screen = Screen()
+
+#Valeurs utilitaires
+game = 'accueil'
+level = 1
+firstInit = 0
+
+# Boucle du jeu
+while 1:
+
+    # Boucle de l'ecran d'accueil
+    while game == 'accueil':
+        pygame.time.Clock().tick(120)
+
+        # Premiere Initialisation de l'ecran d'accueil
+        if not firstInit:
+            scene = Menu(screen)
+            firstInit = 1
+
+        # Evenements
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                sys.exit()
+            if event.type == MOUSEBUTTONDOWN:
+                if pygame.mouse.get_pressed() == (1,0,0):
+                    mousePos = pygame.mouse.get_pos()
+                    x = scene.checkButton(mousePos)
+                    # Si l'utilisateur a cliqué sur un bouton
+                    if not scene.optionOpen and not scene.creditOpen:
+                        if x and x < 5:
+                            scene.quit()
+                            firstInit = 0
+                            game = 'jeu'
+                            level = x
+                        elif x and x == 5:
+                            scene.creditWindow()
+                        elif x and x == 6:
+                            scene.options()
+                    else:
+                        if x and x == 7:
+                            if scene.optionOpen:
+                                scene.options(True)
+                            else:
+                                scene.creditWindow(True)
+                        elif x and x == 8:
+                            scene.setMusicConf()
+                        elif x and x == 9:
+                            scene.setSoundConf()
+        scene.events()
+
+        # Rafraichissement
+        scene.display()
+        pygame.display.flip()
+
+    # Boucle d'une partie
+    while game == 'jeu':
+        pygame.time.Clock().tick(120)
+
+        # Premiere Initialisation de la partie
+        if not firstInit:
+            if level == 1:
+                scene = Space(screen)
+            elif level == 2:
+                scene = Water(screen)
+            elif level == 3:
+                scene = Roche(screen)
+            elif level == 4:
+                scene = Road(screen)
+            firstInit = 1
+
+        # Evenements
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                sys.exit()
+            if event.type == KEYDOWN:
+                if event.key == K_ESCAPE:
+                    scene.Pause(False, False)
+            if event.type == MOUSEBUTTONDOWN and scene.pause:
+                if pygame.mouse.get_pressed() == (1,0,0):
+                    mousePos = pygame.mouse.get_pos()
+                    x = scene.checkButton(mousePos)
+                    if x and not scene.option:
+                        if x == 1:
+                            scene.Resume()
+                        elif x == 2:
+                            scene.options()
+                        else:
+                            scene.quit()
+                            firstInit = 0
+                            game = 'accueil'
+                    elif x and scene.option:
+                        if x == 4:
+                            scene.options(True)
+                        elif x == 5:
+                            scene.setMusicConf()
+                        elif x and x == 6:
+                            scene.setSoundConf()
+        scene.events()
+
+        # Rafraichissement
+        scene.display()
+        pygame.display.flip()

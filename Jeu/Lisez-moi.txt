@@ -1,0 +1,10 @@
+﻿Les commandes du jeu:
+
+
+Flèche gauche : déplacement à gauche
+
+Flèche droite : déplacement à droite
+
+Bar d'espace : Tirer
+
+Echap : Mettre en pause

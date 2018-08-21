@@ -1,0 +1,109 @@
+{
+  "background": "Ressources/Sprites/level4/road.png",
+  "music": "Ressources/Songs/audio-avenue.wav",
+  "time": 45000,
+  "ennemiNumber": 50,
+  "ennemis": [
+    {
+      "name": "voiture1",
+      "image": "Ressources/Sprites/level4/voiture1.png",
+      "hostile": false,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [2000, 8000, 20000],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 2000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -70", "200 -70", "290 -70"]
+        }
+      ],
+      "speed": 2
+    },
+    {
+      "name": "voiture2",
+      "image": "Ressources/Sprites/level4/voiture2.png",
+      "hostile": false,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [6000, 5000, 15000],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 6000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -70", "200 -70", "290 -70"]
+        }
+      ],
+      "speed": 2
+    },
+    {
+      "name": "camion",
+      "image": "Ressources/Sprites/level4/camion.png",
+      "hostile": false,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [1000, 7000, 15000],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 1000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -70", "200 -70", "290 -70"]
+        }
+      ],
+      "speed": 2
+    },
+    {
+      "name": "tireur",
+      "image": "Ressources/Sprites/level4/tireur.png",
+      "hostile": true,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [6000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 6000,
+              "id": 0
+            },
+            {
+              "time": 6500,
+              "id": 3
+            },
+            {
+              "time": 7000,
+              "id": 0
+            }
+          ],
+          "positions": ["10 -57"]
+        }
+      ],
+      "speed": 2
+    }
+  ],
+  "player": {
+    "destruction": "Ressources/Sprites/explosionSprite.png",
+    "sprite": {
+      "image": "Ressources/Sprites/level4/tank.png",
+      "column": 3,
+      "row": 1,
+      "miss": 0
+    }
+  }
+}

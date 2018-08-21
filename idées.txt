@@ -1,0 +1,39 @@
+Ecrans:
+
+  Demarrage:
+     - Affichage du titre
+     - bouton jouer
+     - bouton options
+
+  Options:
+     - potar volume
+     - bouton toggle sons
+
+  Partie:
+    - niveaux / vagues
+    - points
+    - vies
+  
+    Les vaisseaux ennemis varies de la descente droite à la descente en zig-zag selon le niveau
+    Selon le niveau, les ennemis peuvent tirer des projectiles.
+    Le joueur ne peut se déplacer que sur un axe (x)
+    
+	
+    La partie prend fin quand le joueur est touché par un projectile ou si un ennemi arrive au même niveau
+    que le joueur.
+
+	Niveaux : 
+		- 1 (bac à sable): Les ennemis descendent lentement en ligne droite, point de vie assez faible.
+		- 2 (récréation): Les ennemis sont en mouvement (diagonale, zig-zag), point de vie assez faible.
+		- 3 (détente): Les ennemis vont plus vite et descendent en ligne droite avec plus de point de vie.
+		- 4 (remise en forme): Les ennemis vont vite et descendent aléatoirement, ont plus de point de vie et commencent à tirer (peu de dégats)
+		- 5 (niveau extreme): les ennemis vont tres vite, se deplacent aléatoirement, tirent des projectiles qui OS, gros sac de points de vie 
+
+	Score : 
+		- Point de kill d'ennemis
+		- Point de bonus (pastilles qui spawn aléatoire)
+
+
+  Fin:
+    - affichage gameOver
+    - affichage score

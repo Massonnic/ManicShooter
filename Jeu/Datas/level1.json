@@ -1,0 +1,217 @@
+{
+  "background": "Ressources/Sprites/level1/space.jpg",
+  "music": "Ressources/Songs/sad-robot.wav",
+  "time": 20000,
+  "ennemiNumber": 50,
+  "ennemis": [
+    {
+      "name": "meteorite",
+      "image": "Ressources/Sprites/level1/meteorite.png",
+      "hostile": false,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [2000, 8000, 17500, 20500],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 2000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -70", "200 -70", "290 -70"]
+        },
+        {
+          "time": [3000, 9000],
+          "number": 2,
+          "patterns": [
+            {
+              "time": 3000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "290 -70"]
+        },
+        {
+          "time": [4000],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 4000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -280", "110 -210", "200 -140", "290 -70"]
+        },
+        {
+          "time": [10000],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 10000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -140", "200 -210", "290 -280"]
+        },
+        {
+          "time": [6000, 12000],
+          "number": 3,
+          "patterns": [
+            {
+              "time": 6000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -70", "200 -70"]
+        },
+        {
+          "time": [7000, 13000],
+          "number": 3,
+          "patterns": [
+            {
+              "time": 7000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70", "110 -70", "290 -70"]
+        },
+        {
+          "time": [15000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 15000,
+              "id": 0
+            }
+          ],
+          "positions": ["290 -70"]
+        },
+        {
+          "time": [18000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 18000,
+              "id": 0
+            }
+          ],
+          "positions": ["20 -70"]
+        }
+      ],
+      "speed": 2
+    },
+    {
+      "name": "drone",
+      "image": "Ressources/Sprites/level1/drone.png",
+      "hostile": true,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [14000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 14000,
+              "id": 1
+            },
+            {
+              "time": 15000,
+              "id": 3
+            },
+            {
+              "time": 15500,
+              "id": 0
+            }
+          ],
+          "positions": ["16 -57"]
+        },
+        {
+          "time": [15000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 15000,
+              "id": 0
+            },
+            {
+              "time": 15500,
+              "id": 1
+            }
+          ],
+          "positions": ["166 -57"]
+        },
+        {
+          "time": [14000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 14000,
+              "id": 1
+            },
+            {
+              "time": 15000,
+              "id": 5
+            },
+            {
+              "time": 15500,
+              "id": 0
+            }
+          ],
+          "positions": ["276 -57"]
+        },
+        {
+          "time": [17000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 17000,
+              "id": 0
+            },
+            {
+              "time": 17500,
+              "id": 3
+            },
+            {
+              "time": 19000,
+              "id": 5
+            },
+            {
+              "time": 20500,
+              "id": 3
+            },
+            {
+              "time": 22000,
+              "id": 5
+            },
+            {
+              "time": 23500,
+              "id": 7
+            },
+            {
+              "time": 25000,
+              "id": 9
+            },
+            {
+              "time": 26500,
+              "id": 0
+            }
+          ],
+          "positions": ["16 -57"]
+        }
+      ],
+      "speed": 2
+    }
+  ],
+  "player": {
+    "destruction": "Ressources/Sprites/explosionSprite.png",
+    "sprite": {
+      "image": "Ressources/Sprites/level1/Ship.png",
+      "column": 3,
+      "row": 4,
+      "miss": 1
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "background": "Ressources/Sprites/level2/water.png",
+  "music": "Ressources/Songs/tiny-ship.wav",
+  "time": 45000,
+  "ennemiNumber": 50,
+  "ennemis": [
+    {
+      "name": "meteorite",
+      "image": "Ressources/Sprites/level2/drakar.png",
+      "hostile": false,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [2000, 4000, 8000],
+          "number": 5,
+          "patterns": [
+            {
+              "time": 2000,
+              "id": 0
+            }
+          ],
+          "positions": ["23 -70", "121 -70", "195 -70", "269 -70", "366 -70"]
+        },
+        {
+          "time": [5000],
+          "number": 2,
+          "patterns": [
+            {
+              "time": 5000,
+              "id": 0
+            }
+          ],
+          "positions": ["150 -70", "246 -70"]
+        },
+        {
+          "time": [7000],
+          "number": 3,
+          "patterns": [
+            {
+              "time": 7000,
+              "id": 0
+            }
+          ],
+          "positions": ["23 -70", "110 -70", "172 -70"]
+        },
+	      {
+          "time": [8500, 10000, 15000],
+          "number": 3,
+          "patterns": [
+            {
+              "time": 8500,
+              "id": 0
+            }
+          ],
+          "positions": ["23 -70", "246 -70", "300 -70"]
+        },
+	      {
+          "time": [8800, 2500, 11000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 8800,
+              "id": 0
+            }
+          ],
+          "positions": ["110 -70"]
+        }
+      ],
+      "speed": 2
+    },
+    {
+      "name": "drone",
+      "image": "Ressources/Sprites/level2/drone2.png",
+      "hostile": true,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [1500],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 1500,
+              "id": 1
+            }
+          ],
+          "positions": ["130 -57"]
+        },
+        {
+          "time": [12000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 12000,
+              "id": 1
+            },
+            {
+              "time": 13000,
+              "id": 3
+            },
+            {
+              "time": 13500,
+              "id": 0
+            },
+            {
+              "time": 13800,
+              "id": 1
+            }
+          ],
+          "positions": ["130 -57"]
+        }
+      ],
+      "speed": 2
+    }
+  ],
+  "player": {
+    "destruction": "Ressources/Sprites/explosionSprite.png",
+    "sprite": {
+      "image": "Ressources/Sprites/level2/bateau.png",
+      "column": 4,
+      "row": 1,
+      "miss": 0
+    }
+  }
+}

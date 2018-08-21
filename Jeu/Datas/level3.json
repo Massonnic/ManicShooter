@@ -1,0 +1,100 @@
+{
+  "background": "Ressources/Sprites/level3/caverne.png",
+  "music": "Ressources/Songs/the-desert.wav",
+  "time": 45000,
+  "ennemiNumber": 50,
+  "ennemis": [
+    {
+      "name": "rocher",
+      "image": "Ressources/Sprites/level3/rocher.png",
+      "hostile": false,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [2000, 8000, 13000],
+          "number": 4,
+          "patterns": [
+            {
+              "time": 2000,
+              "id": 0
+            }
+          ],
+          "positions": ["40 -70", "130 -70", "200 -70", "290 -70"]
+        },
+        {
+          "time": [5000],
+          "number": 2,
+          "patterns": [
+            {
+              "time": 5000,
+              "id": 0
+            }
+          ],
+          "positions": ["150 -70", "240 -70"]
+        },
+        {
+          "time": [7000],
+          "number": 3,
+          "patterns": [
+            {
+              "time": 7000,
+              "id": 0
+            }
+          ],
+          "positions": ["40 -70", "110 -70", "200 -70"]
+        }
+      ],
+      "speed": 2
+    },
+    {
+      "name": "drone",
+      "image": "Ressources/Sprites/level3/drone.png",
+      "hostile": true,
+      "destruction": "Ressources/Sprites/explosionSprite.png",
+      "timeBeforeDepop": 600,
+      "spawns": [
+        {
+          "time": [6000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 6000,
+              "id": 1
+            }
+          ],
+          "positions": ["46 -57"]
+        },
+        {
+          "time": [9000],
+          "number": 1,
+          "patterns": [
+            {
+              "time": 9000,
+              "id": 1
+            },
+            {
+              "time": 11000,
+              "id": 2
+            },
+            {
+              "time": 11500,
+              "id": 0
+            }
+          ],
+          "positions": ["250 -57"]
+        }
+      ],
+      "speed": 2
+    }
+  ],
+  "player": {
+    "destruction": "Ressources/Sprites/explosionSprite.png",
+    "sprite": {
+      "image": "Ressources/Sprites/level3/shipRoche.png",
+      "column": 4,
+      "row": 3,
+      "miss": 2
+    }
+  }
+}
